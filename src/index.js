@@ -19,7 +19,6 @@ class App extends Component {
         <Router history={browserHistory}>
           <ScrollToTop>
             <MainRoutes />
-            <i className="fa fa-camera-retro"></i> fa-camera-retro
           </ScrollToTop>
         </Router>
       </Provider>
