@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { inject, observer } from "mobx-react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 @inject("store")
 @observer
@@ -9,7 +10,7 @@ export default class Auth extends Component {
         const { ui } = this.props.store;
         return (
             <Fragment>
-                <Navbar/>
+                <Navbar />
                 <div className="hero is-fullheight">
                     <div className="hero-body has-text-centered">
                         <div className="column is-one-third"></div>
@@ -21,20 +22,20 @@ export default class Auth extends Component {
                                 </ul>
                             </div>
                             <div className="field">
-                            <p className="control has-icons-left has-icons-right">
-                                <input className="input" type="username" placeholder="Username" />
-                                <span className="icon is-small is-left">
-                                <i className="fas fa-user"></i>
-                                </span>
-                            </p>
+                                <p className="control has-icons-left has-icons-right">
+                                    <input className="input" type="username" placeholder="Username" />
+                                    <span className="icon is-small is-left">
+                                        <i className="fas fa-user"></i>
+                                    </span>
+                                </p>
                             </div>
                             <div className="field">
-                            <p className="control has-icons-left">
-                                <input className="input" type="password" placeholder="Password" />
-                                <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
-                                </span>
-                            </p>
+                                <p className="control has-icons-left">
+                                    <input className="input" type="password" placeholder="Password" />
+                                    <span className="icon is-small is-left">
+                                        <i className="fas fa-lock"></i>
+                                    </span>
+                                </p>
                             </div>
                             <div className="tabs is-centered">
                                 <ul>
@@ -45,6 +46,7 @@ export default class Auth extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </Fragment>
         );
     }
